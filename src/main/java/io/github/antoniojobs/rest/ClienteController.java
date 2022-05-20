@@ -59,7 +59,7 @@ public class ClienteController {
                 .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Cliente> buscarTodos(){
         return repository.findAll();
     }
