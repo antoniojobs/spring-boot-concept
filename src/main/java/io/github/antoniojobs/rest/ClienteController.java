@@ -53,7 +53,6 @@ public class ClienteController {
                 .map( cliente ->{
                     cliente.setNome(clienteAtualizado.getNome());
                     cliente.setCpf(clienteAtualizado.getCpf());
-
                     return repository.save(cliente);
                 })
                 .orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND));
